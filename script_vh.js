@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById('tituloValorHoraTrabalho').textContent = `Excelente ${nomeuUsuariu}, vamos cadastrar alguns dados sobre seu trabalho!`;
     document.getElementById('tituloCustosMaodeObra').textContent = `Concluímos com sucesso, ${nomeuUsuariu}!`;
-    document.getElementById('h2').textContent = `O valor da sua hora de trabalho é: R$`;
+    document.getElementById('h2').textContent = `O valor da sua hora de trabalho é: `;
 });
 
 function salvarValoresMateriais() {

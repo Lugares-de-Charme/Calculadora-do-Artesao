@@ -24,7 +24,7 @@
                 <img src="logo.png" alt="Calculadora do Artesão">
             </div>
             <!-- Título da seção atualizado dinamicamente -->
-            <h1 id="tituloCustosMateriais">Informe os Custos Materiais</h1>
+            <h1 id="tituloLeituraCusta"></h1>
             <form id="custos">
                 <label for="materiaPrima">Matéria-prima:</label>
                 <input type="text" id="materiaPrima" name="materiaPrima" required>
@@ -49,9 +49,8 @@
             <div class="log">
                 <img src="logo.png" alt="Calculadora do Artesão">
             </div>
-            <h1 id="tituloResultado">Concluímos com sucesso, [nome]!</h1>
-            <h2>O <strong>preço do produto</strong> [nome produto] é:</h2> 
-            <h3><span id="precoFinal">00,00</span> </h3>    
+            <h1 id="tituloResultados"></h1>
+            <div id="resultadoCustoTexto"></div>
             <div class="button-group">
                 <button type="button" class="inicio" onclick="window.location.href='index.html'">INÍCIO</button>
             </div>
@@ -60,6 +59,6 @@
 
     <div class="coluna-laranja"></div> <!-- Coluna lateral direita -->
 
-    <script src="script_cd.js"></script>
+    <script src="script_ct.js"></script>
 </body>
 </html>

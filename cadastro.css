@@ -60,9 +60,9 @@ table, th, td {
 }
 
 th, td {
-    padding: 8px;
+    padding: 5px;
     text-align: center;
-    font-size: 1.5rem; /* Tamanho de fonte responsivo */
+    font-size: 1.0rem; /* Tamanho de fonte responsivo */
     font-family: 'Nunito', sans-serif;
 }
 
