@@ -80,6 +80,10 @@ function mostrarResultadosDespesas() {
         <h1>Para cada ${qtdPecasMes} peças produzidas por mês.</h1>
         `;
 
+        if (historicoDespesas.length === 0) {
+            return;
+        }
+
     // Cria uma div para a tabela
     resultadoDespesaTexto.innerHTML += '<div class="tabela-container"></div>';
     const tabelaContainer = resultadoDespesaTexto.querySelector('.tabela-container');
