@@ -45,6 +45,16 @@ function irParaProximaSecao(proximaSecao) {
     document.getElementById(proximaSecao).style.display = 'block';
 }
 
+function voltarParaSecao(prevSection) {
+    mudarParaSecao(prevSection);
+}
+
+function mudarParaSecao(sectionId) {
+    document.getElementById('section2').style.display = 'none';
+    document.getElementById('section3').style.display = 'none';
+    document.getElementById(sectionId).style.display = 'block';
+}
+
 function apenasNumerosReais(input) {
     input.value = input.value.replace(/[^0-9.,]/g, '');
     const partes = input.value.split(/[.,]/);
