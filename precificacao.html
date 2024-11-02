@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Precificação</title>
+    <link rel="stylesheet" href="cadastro.css"> <!-- Estilos reutilizados da tela de cadastro -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    /* CSS adicional para centralizar o botão de início */
+    .button-group {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+</style>
+<body>
+    <div class="coluna-laranja"></div> <!-- Coluna lateral esquerda -->
+
+    <div class="container">
+        <div class="form-container" id="section1">
+            <div class="log">
+                <img src="imgs/logo.png" alt="Calculadora do Artesão">
+            </div>
+            <!-- Título da seção atualizado dinamicamente -->
+            <h1 id="tituloCustos">Informe os Custos Materiais</h1>
+            <form id="custos">
+                <label for="valorHora">Valor da Hora de Trabalho:</label>
+                <input type="text" id="horaTrabalho" name="horaTrabalho" required inputmode="decimal" pattern="^[0-9]*[.,]?[0-9]+$" oninput="apenasNumerosReais(this)">
+
+                <label for="custoMateria">Custo da Matéria-Prima do produto:</label>
+                <input type="text" id="custo" name="custo" required inputmode="decimal" pattern="^[0-9]*[.,]?[0-9]+$" oninput="apenasNumerosReais(this)">
+
+                <div class="button-group">
+                    <button type="button" class="voltar" onclick="window.location.href='cadastro.html'">VOLTAR</button>
+                    <button type="button" class="confirmar" onclick="salvarValoresMateriais(); validarFormulario('custosMateriaisForm', 'section2')">PRÓXIMO</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-container" id="section2" style="display: none;">
+            <div class="log">
+                <img src="imgs/logo.png" alt="Calculadora do Artesão">
+            </div>
+            <h1 id="tituloCustosMaodeObra">Informe os Custos de Mão de Obra</h1>
+            <form id="maoDeObraForm">
+                <label for="horasTrabalho">Despesa por Produto:</label>
+                <input type="text" id="despesaProduto" name="despesaProduto" required inputmode="decimal" pattern="^[0-9]*[.,]?[0-9]+$" oninput="apenasNumerosReais(this)">
+
+                <label for="custoHora">Margem de Lucro (%):</label>
+                <input type="text" id="margemLucro" name="margemLucro" required inputmode="decimal" pattern="^[0-9]*[.,]?[0-9]+$" oninput="apenasNumerosReais(this)">
+
+                <div class="button-group">
+                    <button type="button" class="voltar" onclick="voltarParaSecao('section1')">VOLTAR</button>
+                    <button type="button" class="confirmar" onclick="salvarValoresMaodeObra(); validarFormulario('maoDeObraForm', 'section3')">PRÓXIMO</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-container" id="section3" style="display: none;">
+            <div class="log">
+                <img src="imgs/logo.png" alt="Calculadora do Artesão">
+            </div>
+            <h1 id="tituloResultado">Concluímos com sucesso, [nome]!</h1>
+            <h2>O <strong>preço do produto</strong> [nome produto] é:</h2> 
+            <h3><span id="precoFinal">00,00</span> </h3>    
+           
+            <table>
+                <tr>
+                    <th>Nome do Produto</th>
+                    <td id="nomeProduto">Produto Exemplo</td>
+                </tr>
+                <tr>
+                    <th>Custo Total</th>
+                    <td id="custoTotal">R$ 0,00</td>
+                </tr>
+                <tr>
+                    <th>Valor do Trabalho</th>
+                    <td id="valorTrabalho">R$ 0,00</td>
+                </tr>
+                <tr>
+                    <th>Despesa por Peça</th>
+                    <td id="despesaPeca">R$ 0,00</td>
+                </tr>
+                <tr>
+                    <th>Preço com Margem de Lucro</th>
+                    <td id="precoMargem">R$ 0,00</td>
+                </tr>
+                <tr>
+                    <th>Preço Final</th>
+                    <td id="precoFinalTabela">R$ 0,00</td>
+                </tr>
+            </table>
+            <div class="button-group">
+                <button type="button" class="inicio" onclick="window.location.href='index.html'">INÍCIO</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="coluna-laranja"></div> <!-- Coluna lateral direita -->
+
+<script src="script_pr.js"></script>
+
+</body>
+</html>

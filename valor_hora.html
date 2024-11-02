@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Precificação</title>
+    <link rel="stylesheet" href="cadastro.css"> <!-- Estilos reutilizados da tela de cadastro -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    .button-group {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+</style>
+<body>
+    <div class="coluna-laranja"></div>
+
+    <div class="container">
+        <div class="form-container" id="section1">
+            <div class="log">
+                <img src="imgs/logo.png" alt="Calculadora do Artesão">
+            </div>
+            <h1 id="tituloValorHoraTrabalho">Informe os Custos Materiais</h1>
+            <form id="valorHoraTrabalho">
+                <label for="salarioDesejado">Salário Desejado:</label>
+                <input type="text" id="SD" name="SD" required inputmode="decimal" pattern="^[0-9]*[.,]?[0-9]+$" oninput="apenasNumerosReais(this)">
+
+                <label for="diaTrabalhadoMes">Dias Trabalhados Mensal:</label>
+                <input type="text" id="DTM" name="DTM" required inputmode="decimal" pattern="^[0-9]*[.,]?[0-9]+$" oninput="apenasNumerosReais(this)">
+
+                <label for="horasTrabalhadoDia">Horas Diárias de Trabalho:</label>
+                <input type="text" id="HTD" name="HTD" required inputmode="decimal" pattern="^[0-9]*[.,]?[0-9]+$" oninput="apenasNumerosReais(this)">
+
+                <label for="horasProducao">Horas Necessárias para Produção:</label>
+                <input type="text" id="HP" name="HP" required inputmode="decimal" pattern="^[0-9]*[.,]?[0-9]+$" oninput="apenasNumerosReais(this)">
+
+                <div class="button-group">
+                    <button type="button" class="voltar" onclick="window.location.href='cadastro2.html'">VOLTAR</button>
+                    <button type="button" class="confirmar" onclick="validarFormulario()">PRÓXIMO</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-container" id="section2" style="display: none;">
+            <div class="log">
+                <img src="imgs/logo.png" alt="Calculadora do Artesão">
+            </div>
+            <h1 id="tituloCustosMaodeObra"></h1>
+            <h2 id="h2"></h2>
+            <h3 id="resultado"></h3>
+            <form id="maoDeObraForm">
+                <div class="button-group">
+                    <button type="button" class="inicio" onclick="window.location.href='index.html'">INÍCIO</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="coluna-laranja"></div>
+
+    <script src="script_vh.js"></script>
+</body>
+</html>

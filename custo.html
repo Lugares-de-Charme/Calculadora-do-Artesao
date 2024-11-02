@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Precificação</title>
+    <link rel="stylesheet" href="cadastro.css"> <!-- Estilos reutilizados da tela de cadastro -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS adicional para centralizar o botão de início */
+        .button-group {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="coluna-laranja"></div> <!-- Coluna lateral esquerda -->
+
+    <div class="container">
+        <div class="form-container" id="section1">
+            <div class="log">
+                <img src="imgs/logo.png" alt="Calculadora do Artesão">
+            </div>
+            <!-- Título da seção atualizado dinamicamente -->
+            <h1 id="tituloCustosMateriais">Informe os Custos Materiais</h1>
+            <form id="custos">
+                <label for="materiaPrima">Matéria-prima:</label>
+                <input type="text" id="materiaPrima" name="materiaPrima" required>
+
+                <label for="custoMateriaPri">Custo:</label>
+                <input type="text" id="custoMP" name="custoMP" required inputmode="decimal" pattern="^[0-9]*[.,]?[0-9]+$" oninput="apenasNumerosReais(this)">
+
+                <label for="rendePecas">Rende quantas peças:</label>
+                <input type="text" id="qtdPecas" name="qtdPecas" required inputmode="decimal" pattern="^[0-9]*[.,]?[0-9]+$" oninput="apenasNumerosReais(this)">
+
+                <div class="button-group">
+                    <button type="button" class="plus" onclick="atualizarValores()">+ ADICIONAR</button>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="voltar" onclick="window.location.href='cadastro.html'">VOLTAR</button>
+                    <button type="button" class="confirmar" onclick="validarFormulario()">PRÓXIMO</button>
+                </div>
+            </form>
+        </div>
+        
+        <div class="form-container" id="section2" style="display: none;">
+            <div class="log">
+                <img src="imgs/logo.png" alt="Calculadora do Artesão">
+            </div>
+            <h1 id="tituloResultado">Concluímos com sucesso, [nome]!</h1>
+            <h2>O <strong>preço do produto</strong> [nome produto] é:</h2> 
+            <h3><span id="precoFinal">00,00</span> </h3>    
+            <div class="button-group">
+                <button type="button" class="inicio" onclick="window.location.href='index.html'">INÍCIO</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="coluna-laranja"></div> <!-- Coluna lateral direita -->
+
+    <script src="script_cd.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produto</title>
+    <link rel="stylesheet" href="cadastro.css"> <!-- Coloque seu CSS aqui -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet"> <!-- Importando Nunito -->
+</head>
+<body>
+    <div class="coluna-laranja"></div> <!-- Coluna lateral esquerda -->
+    
+    <div class="container">
+        <div class="form-container">
+            <div class="log">
+                <img src="imgs/logo.png" alt="Calculadora do Artesão">
+            </div>
+            <h1>Olá, qual seu nome e qual o seu produto?</h1>
+            <form id="produtoForm">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="produto">Nome do Produto:</label>
+                <input type="text" id="produto" name="produto" required>
+
+                <div class="button-group">
+                    <!-- Aplicando classes para os botões -->
+                    <button type="button" class="voltar" onclick="window.location.href='index.html'">VOLTAR</button>
+                    <button type="submit" class="confirmar">CONFIRMAR</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="coluna-laranja"></div> <!-- Coluna lateral direita -->
+
+    <script>
+        document.getElementById('produtoForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o envio do formulário
+
+    // Pegando os valores dos campos
+    const nome = document.getElementById('nome').value;
+    const produto = document.getElementById('produto').value;
+
+    // Salvando no sessionStorage
+    sessionStorage.setItem('nomeUsuario', nome);
+    sessionStorage.setItem('nomeProduto', produto);
+
+    // Verifica qual calculadora foi escolhida
+    const tipoCalculadora = sessionStorage.getItem('tipoCalculadora');
+
+    // Redireciona para a página da calculadora correspondente
+    if (tipoCalculadora === 'precificacao') {
+        window.location.href = 'precificacao.html';
+    } else if (tipoCalculadora === 'custos') {
+        window.location.href = 'custo.html';
+    } else if (tipoCalculadora === 'despesas') {
+        window.location.href = 'despesas.html';
+    }
+});
+
+    </script>
+</body>
+</html>

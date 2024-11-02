@@ -1,0 +1,226 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px; /* Limita o tamanho máximo em telas grandes */
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1{
+    font-size: 2rem; /* Tamanho de fonte responsivo */
+    color: #c05625;
+    margin-bottom: 5px;
+    text-align: center;
+    margin-top: 60px;
+    font-family: 'Nunito', sans-serif;
+}
+
+h2 {
+    font-size: 2rem; /* Tamanho de fonte responsivo */
+    color: #c05625;
+    margin-bottom: 0px;
+    text-align: center;
+    margin-top: 0px;
+    font-family: 'Nunito', sans-serif;
+}
+
+h3 {
+    font-size: 2.5rem; /* Tamanho de fonte responsivo */
+    font-weight: bold;
+    color: #c05625;
+    margin-bottom: 5px;
+    text-align: center;
+    margin-top: 5px;
+    font-family: 'Nunito', sans-serif;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+    font-size: 1.5rem; /* Tamanho de fonte responsivo */
+    font-family: 'Nunito', sans-serif;
+}
+
+label {
+    font-weight: bold;
+    font-size: 1.25rem; /* Tamanho de fonte responsivo */
+    font-family: 'Nunito', sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.log {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.log img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 70px;
+}
+
+.coluna-laranja {
+    background-color: #c05625;
+    width: 28%;
+    min-width: 100px;
+    height: 100vh;
+}
+
+input[type="text"] {
+    width: 80%; /* Torna o input mais responsivo */
+    max-width: 400px;
+    padding: 15px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 15px;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+button.confirmar {
+    background-color: #c05625;
+    color: white;
+    border: none;
+}
+
+button.confirmar:hover {
+    background-color: #cc561d;
+    transform: scale(1.05);
+}
+
+button.voltar {
+    background-color: white;
+    color: #c05625;
+    border: 2px solid #c05625;
+}
+
+button.voltar:hover {
+    background-color: #fff;
+    color: #cc561d;
+    border-color: #cc561d;
+    transform: scale(1.05);
+}
+
+button.inicio {
+    padding: 25px 60px;
+    background-color: white;
+    color: #c05625;
+    border: 2px solid #c05625;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+button.inicio:hover {
+    background-color: #fff;
+    color: #cc561d;
+    border-color: #cc561d;
+    transform: scale(1.05);
+}
+
+button.plus {
+    background-color: #be8d42;
+    color: white;
+    border: none;
+    padding: 20px 87px;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-bottom: 0px;
+    transition: transform 0.3s ease; /* Animação para o botão tutorial */
+}
+
+button.plus:hover {
+    background-color: #b4673a;
+    transform: scale(1.05); /* Aumenta ligeiramente o botão tutorial ao passar o mouse */
+}
+
+
+.logos {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.logos img {
+    width: 70px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    h1, h2, h3 {
+        font-size: 1.5rem;
+    }
+    .log img {
+        width: 200px;
+    }
+    input[type="text"] {
+        width: 100%;
+        padding: 12px;
+    }
+    button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+    .coluna-laranja {
+        width: 10%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2, h3 {
+        font-size: 1.25rem;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    .log img {
+        width: 150px;
+    }
+    .coluna-laranja {
+        display: none;
+    }
+}
