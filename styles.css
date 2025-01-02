@@ -16,18 +16,13 @@ body {
 
 .coluna-laranja {
     background-color: #c05625;
-    width: 28%; /* Ajuste a largura conforme necessário */
+    width: 20%; /* Ajuste a largura conforme necessário */
     height: 100vh;
 }
 
 .conteudo {
     width: 80%; /* A largura ajusta para ocupar o espaço entre as colunas */
     margin: 0 auto;
-}
-
-header {
-    margin-bottom: 20px;
-    padding-top: 30px; /* Adiciona espaço extra no topo */
 }
 
 .logo {
@@ -39,6 +34,7 @@ header {
 .logo img {
     width: 500px;
     margin-bottom: 25px;
+    margin-top: 40px;
 }
 
 main {
@@ -50,7 +46,6 @@ main {
 .calculators {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Define um grid responsivo */
-    gap: 100px;
     justify-items: center; /* Centraliza os itens horizontalmente */
     align-items: center; /* Centraliza os itens verticalmente */
     margin-bottom: 30px;
@@ -105,7 +100,7 @@ main {
     font-weight: 700;
     cursor: pointer;
     border-radius: 15px;
-    margin-bottom: 105px;
+    margin-bottom: 100px;
     transition: transform 0.3s ease; /* Animação para o botão tutorial */
 }
 
@@ -122,6 +117,7 @@ footer {
 .logos {
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
     gap: 70px;
 }
 

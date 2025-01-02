@@ -66,8 +66,10 @@ function apenasNumerosReais(input) {
 function salvarValoresMateriais() {
     const horaTrabalho = parseFloat(document.getElementById('horaTrabalho').value.replace(',', '.'));
     const custo = parseFloat(document.getElementById('custo').value.replace(',', '.'));
+    const horasProducao = document.getElementById('HP').value;
     sessionStorage.setItem('horaTrabalho', horaTrabalho);
     sessionStorage.setItem('custo', custo);
+    sessionStorage.setItem('HP', horasProducao);
 }
 
 function salvarValoresMaodeObra() {
@@ -78,7 +80,7 @@ function salvarValoresMaodeObra() {
 }
 
 function calcularPrecoFinal() {
-    const horaTrabalho = parseFloat(sessionStorage.getItem('horaTrabalho'));
+    const horaTrabalho = parseFloat(sessionStorage.getItem('horaTrabalho')) * parseFloat(sessionStorage.getItem('HP'));
     const custo = parseFloat(sessionStorage.getItem('custo'));
     const despesaProduto = parseFloat(sessionStorage.getItem('despesaProduto'));
     const margemLucro = parseFloat(sessionStorage.getItem('margemLucro'));
@@ -101,7 +103,7 @@ document.getElementById('tituloResultado').innerText = `Concluímos com sucesso,
 document.querySelector('h2').innerText = `O preço do produto ${nomeProduto || 'produto'} é:`;
 
 const custoTotal = parseFloat(sessionStorage.getItem('horaTrabalho')) + parseFloat(sessionStorage.getItem('custo'));
-const valorTrabalho = parseFloat(sessionStorage.getItem('horaTrabalho')).toFixed(2);
+const valorTrabalho = parseFloat(sessionStorage.getItem('horaTrabalho'))* parseFloat(sessionStorage.getItem('HP')).toFixed(2);
 const despesaPeca = parseFloat(sessionStorage.getItem('despesaProduto')).toFixed(2);
 const precoMargem = parseFloat(sessionStorage.getItem('precoMargem')).toFixed(2);
 const precoFinal = parseFloat(sessionStorage.getItem('precoFinal')).toFixed(2);

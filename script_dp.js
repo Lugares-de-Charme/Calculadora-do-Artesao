@@ -176,7 +176,7 @@ function validarFormulario2() {
     if (todosVazios) {
         irParaProximaSecao('section3');
     } else {
-        alert('Por favor, deixe todos os campos vazios antes de prosseguir.');
+        alert('Se este for seu último item, clique em Adicionar depois Próximo.');
     }
 }
 

@@ -10,12 +10,10 @@ function salvarValoresMateriais() {
     const salarioDesejado = document.getElementById('SD').value;
     const diasTrabalhadosMes = document.getElementById('DTM').value;
     const horasTrabalhadasDia = document.getElementById('HTD').value;
-    const horasProducao = document.getElementById('HP').value;
 
     sessionStorage.setItem('SD', salarioDesejado);
     sessionStorage.setItem('DTM', diasTrabalhadosMes);
     sessionStorage.setItem('HTD', horasTrabalhadasDia);
-    sessionStorage.setItem('HP', horasProducao);
 }
 
 function validarFormulario() {
@@ -57,9 +55,8 @@ function calcularValorHora() {
     const salarioDesejado = parseFloat(sessionStorage.getItem('SD'));
     const diasTrabalhadosMes = parseFloat(sessionStorage.getItem('DTM'));
     const horasTrabalhadasDia = parseFloat(sessionStorage.getItem('HTD'));
-    const horasProducao = parseFloat(sessionStorage.getItem('HP'));
 
-    const valorTrabalho = (salarioDesejado / (diasTrabalhadosMes * horasTrabalhadasDia)) * horasProducao;
+    const valorTrabalho = (salarioDesejado / (diasTrabalhadosMes * horasTrabalhadasDia));
     sessionStorage.setItem('valorTrabalho', valorTrabalho.toFixed(2));
 }
 
