@@ -3,13 +3,16 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #ffffff;
+    background-color: #c05625;
     margin: 0;
 }
 
 .container {
-    width: 80%;
-    max-width: 1200px; /* Limita o tamanho máximo em telas grandes */
+    width: 70%; /* A largura ajusta para ocupar o espaço entre as colunas */
+    
+    background-color: white;
+    border-radius: 20px;
+    
 }
 
 .form-container {

@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: white;
+    background-color: #c05625;
     color: #333;
     display: flex;
     justify-content: center;
@@ -14,15 +14,13 @@ body {
     text-align: center;
 }
 
-.coluna-laranja {
-    background-color: #c05625;
-    width: 20%; /* Ajuste a largura conforme necessário */
-    height: 100vh;
-}
-
 .conteudo {
-    width: 80%; /* A largura ajusta para ocupar o espaço entre as colunas */
-    margin: 0 auto;
+    width: 50%; /* A largura ajusta para ocupar o espaço entre as colunas */
+    height: 10%;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 45px;
+    justify-content: center;
 }
 
 .logo {
@@ -32,9 +30,9 @@ body {
 }
 
 .logo img {
-    width: 500px;
+    width: max(200px, 25vw);
     margin-bottom: 25px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 main {
@@ -76,17 +74,17 @@ main {
 }
 
 .calculator-item img {
-    width: 136px;
+    width: max(100px, 7vw);
     margin-bottom: 20px;
     border: none; /* Remove borda da imagem */
 }
 
 .calculator-item h2 {
-    font-size: 20px; /* Tamanho ajustado */
+    font-size: max(13px, 1.4vw); /* Tamanho ajustado */
     font-weight: 700;
     color: #333;
     text-align: center;
-    line-height: 1.5; /* Melhor espaçamento entre linhas */
+    line-height: 1; /* Melhor espaçamento entre linhas */
     margin-bottom: 20px;
     font-family: 'Nunito', sans-serif;
 }
@@ -96,11 +94,12 @@ main {
     color: white;
     border: none;
     padding: 20px 35px;
-    font-size: 19px;
+    font-size: max(13px, 1.4vw);
     font-weight: 700;
     cursor: pointer;
     border-radius: 15px;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
+    margin-top: 20px;
     transition: transform 0.3s ease; /* Animação para o botão tutorial */
 }
 
@@ -122,5 +121,5 @@ footer {
 }
 
 .logos img {
-    width: 90px;
+    width: max(20px, 5vw);
 }
