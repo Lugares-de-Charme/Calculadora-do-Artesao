@@ -2,14 +2,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 95vh;
     background-color: #c05625;
-    margin: 0;
 }
 
 .container {
     width: 70%; /* A largura ajusta para ocupar o espaço entre as colunas */
-    
     background-color: white;
     border-radius: 20px;
     
@@ -89,7 +87,6 @@ form {
 
 .log img {
     width: 300px;
-    height: auto;
     margin-bottom: 70px;
 }
 
