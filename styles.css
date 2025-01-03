@@ -30,7 +30,7 @@ body {
 }
 
 .logo img {
-    width: max(200px, 25vw);
+    width: max(150px, 25vw);
     margin-bottom: 25px;
     margin-top: 20px;
 }
@@ -121,5 +121,5 @@ footer {
 }
 
 .logos img {
-    width: max(20px, 5vw);
+    width: max(10px, 5vw);
 }
